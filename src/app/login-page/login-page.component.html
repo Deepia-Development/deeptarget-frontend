@@ -1,17 +1,17 @@
 
 <div class="grid grid-cols-1 gap-4 content-start xl:grid-cols-2 w-full">
     <div class="xl:px-36 xl:py-8">        
-        <img src="../../assets/images/Logo-Deepia Horizontal Blanco 1.png" class="" width="" height="">        
-    </div>    
-    <div></div>
-    <!-- Texto de titulo -->
-    <div>
-        <div class="pl-36 py-12">
-            <h2 class="text-white font-normal text-6xl text-left">Crea videos personalizados con ayuda de la IA</h2>
-        </div>
+        <img src="../../assets/images/Logo-Deepia Horizontal Blanco 1.png" class="" width="200vw" height="100vh">        
+    </div>                    
+</div>
+
+<div class="grid grid-cols-1 gap-4 content-start xl:grid-cols-2 w-full">
+    <div class="">
+        <div class="pl-36 py-12 pt-32">
+            <h2 class="text-white font-normal text-6xl text-left">Crea videos personalizados con ayuda de la IA</h2>            
+        </div>        
     </div>
-    <!-- Formulario para iniciar sesion-->
-    <div class="px-8 py-8 pr-24">        
+    <div class="px-8 py-32 pr-24">                
         <div class="backdrop-blur-sm max-w-max bg-black/30 px-10 py-10 rounded-2xl">
             <h2 class="text-white text-4xl text-left px-3 py-3">Inicia Sesión</h2>
             <form action="">
@@ -35,13 +35,14 @@
                     <div class="flex flex-wrap mb-6">                    
                         <span class="text-white">Si no tienes una cuenta, 
                             <span class="text-green-400 font-bold">
-                                <a href="">registrate aqui.</a>
+                                <a [routerLink]="['/signup']">registrate aqui.</a>
                             </span>
                         </span>                        
                     </div>
                 </div>
             </form>
         </div>        
-    </div>
- 
-  </div>
+    </div> 
+</div>
+    
+    
