@@ -13,6 +13,9 @@ import { UploadCsvComponent } from './upload-csv/upload-csv.component';
 import { FoundColumnsComponent } from './found-columns/found-columns.component';
 import { HeaderComponent } from './header/header.component';
 import { TimelineBarComponent } from './timeline-bar/timeline-bar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {  MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -28,13 +31,18 @@ import { TimelineBarComponent } from './timeline-bar/timeline-bar.component';
     FoundColumnsComponent,
     HeaderComponent,
     TimelineBarComponent
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxVideoTimelineModule
+    NgxVideoTimelineModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
-  providers: [],
+  providers: [
+    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

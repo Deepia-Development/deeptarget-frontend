@@ -1,53 +1,48 @@
 <app-header></app-header>
 <!-- Main content -->
-<div class="w-screen h-screen bg-zinc-900">
-  <div class="grid grid-cols-2">
+<div class="md:w-full md:h-full bg-zinc-900">
+  <div class="flex flex-col md:grid md:grid-cols-2">
     <!-- Contenedor de la izquierda- -->
-      <div class="flex items-center justify-center px-6 py-6">
-        <div class="bg-black rounded-lg w-full h-full">
-          <div class="space-y-0.5 flex-1">
-            <h3 class="font-medium text-lg tracking-tight text-white leading-tight m-5">
-              AI Power Analytics
-            </h3>
-            <p class="text-sm font-normal text-gray-400 leading-none">
-              Columnas de datos
-            </p>
-            <div class="grid grid-rows-4 gap-8 items-center pt-4">
+      <div class="p-12 md:p-0 h-full md:flex md:items-center md:justify-center md:px-6 md:py-6">
+        <div class="bg-black rounded-lg md:w-full md:h-full">
+          <div class="md:space-y-0.5 md:flex-1">
+            <h3 class="text-2xl p-5 md:p-0 md:font-medium md:text-lg md:tracking-tight text-white md:leading-tight md:m-5">
+              Columnas
+            </h3>          
+            <div class="p-6 md:p-0 md:grid md:grid-rows-4 md:gap-8 md:items-center md:pt-4">
               <div>
-                <div class="grid justify-center">                  
-                  <div class="">
-                    <button class="bg-gradient-to-r from-purple-800 to-purple-950 font-bold py-3 rounded-3xl text-white w-72">
+                <div class="md:grid md:justify-center">                  
+                  <div class="px-5 md:p-0 md:px-0">
+                    <button class="w-full py-3 bg-gradient-to-r from-purple-800 to-purple-950 font-bold md:py-3 rounded-3xl text-white md:w-72">
                       ID: Columna 1
-                  </button>
+                    </button>
                   </div> 
                 </div>
               </div>
               <div>
-                <div class="grid justify-center">                  
-                  <div class="">
-                    <button class="bg-gradient-to-r from-purple-800 to-purple-950 font-bold py-3 rounded-3xl text-white w-72">
+                <div class="md:grid md:justify-center">                  
+                  <div class="px-5 p-3 md:p-0 md:px-0">
+                    <button class="w-full py-3 bg-gradient-to-r from-purple-800 to-purple-950 font-bold md:py-3 rounded-3xl text-white md:w-72">
                       Nombre: Columna 1
-                  </button>
+                    </button>
                   </div> 
                 </div>
               </div>
               <div>
-                <div class="grid justify-center">
-                  
-                  <div class="">
-                    <button class="bg-gradient-to-r from-purple-800 to-purple-950 font-bold py-3 rounded-3xl text-white w-72">
+                <div class="md:grid md:justify-center">                  
+                  <div class="px-5 md:p-0 md:px-0">
+                    <button class="w-full py-3 bg-gradient-to-r from-purple-800 to-purple-950 font-bold md:py-3 rounded-3xl text-white md:w-72">
+                      Telefono: Columna 1
+                    </button>
+                  </div> 
+                </div>
+              </div>
+              <div>
+                <div class="md:grid md:justify-center">                  
+                  <div class="px-5 p-3 md:p-0 md:px-0">
+                    <button class="w-full py-3 bg-gradient-to-r from-purple-800 to-purple-950 font-bold md:py-3 rounded-3xl text-white md:w-72">
                       Email: Columna 1
-                  </button>
-                  </div> 
-                </div>
-              </div>
-              <div>
-                <div class="grid justify-center">
-                  
-                  <div class="">
-                    <button class="bg-gradient-to-r from-purple-800 to-purple-950 font-bold py-3 rounded-3xl text-white w-72">
-                      Número Telefonico: Columna 1
-                  </button>
+                    </button>
                   </div> 
                 </div>
               </div>
@@ -56,7 +51,7 @@
         </div>
       </div>
     <!-- Contenedor de la derecha -->
-    <div class="flex items-end px-8 py-8">
+    <div class="order-first md:order-2 md:flex md:items-end md:px-8 md:py-8">
         <img src="../../assets/images/video-exmaple.jpg" alt="" class="rounded-lg">
     </div>        
   </div>

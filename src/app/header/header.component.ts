@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  constructor() { }
+
+  isOpen = false;
+
+  toggleSidebar(): void {
+    this.isOpen = !this.isOpen;
+  }
+
 }

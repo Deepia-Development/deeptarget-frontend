@@ -1,22 +1,56 @@
-    <header class="backdrop-blur-sm text-gray-700 bg-gradient-to-r from-purple-900 to-gray-900 shadow-sm body-font">
-       <div class="container flex flex-col items-start justify-between p-6 mx-auto md:flex-row">
-            <a class="flex items-center mb-4 font-medium text-gray-900 title-font md:mb-0">
-             <!-- Menu desplegable -->
-                <button>
+<header>
+    <div class="bg-gradient-to-r from-purple-800/60 to-purple-950/60">
+        <div class="p-5 md:p-5 grid grid-cols-2">
+            <div class="grid items-start w-1/2">
+                <button class="" onclick="toggleSidebar()">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-white w-10 h-10">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                </button>          
-            </a>
-            <div>
-                <span class="text-white font-bold text-3xl">DeepTarget</span>
-            </div>                    
-            <div class="items-center h-full">           
+                      </svg>                  
+                </button>                
+            </div>
+            <div class="flex justify-end"> 
+                <span class="text-white text-2xl font-extrabold">DeepTarget</span>
+            </div>                        
+        </div>
+    </div>
+    <div class="">
+        <div id="sideNav" class="hidden absolute w-full h-full backdrop-blur-sm bg-black/70 md:w-full md:h-1/2">
+            <div class="p-4 bg-black ">
+                
+            </div>
+            <div class="grid grid-rows-5">
+                <div class="hover:bg-gray-100/30 p-6">
+                    <span class="text-white font-bold text-3xl">Inicio</span>
+                </div>
+                <div class="hover:bg-gray-100/30 p-6">
+                    <span class="text-white font-bold text-3xl">Mis Campañas</span>
+                </div>
+                <div class="hover:bg-gray-100/30 p-6">
+                    <div>
+                        <span class="text-white font-bold text-3xl">Cuenta</span>
+                    </div>
+                </div>
+                <div class="hover:bg-gray-100/30 p-6 hidden md:block">
+                    <span class="text-white font-bold text-3xl">Cerrar Sesión</span>
+                </div>
+                <div class="text-white">                    
+                </div>
+                <div class="hover:bg-gray-100/30 p-6 md:hidden">
+                    <span class="text-white font-bold text-3xl">Cerrar Sesión</span>
+                </div>
+            </div>
+        </div>    
+    </div>
+</header>
+
+
+    <!-- 
+
+        <div class="items-center h-full">           
                 <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 -mr-24">
                     <span class="font-bold px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                         LOG OUT
                     </span>
                 </button>
             </div>
-        </div>
-    </header>
+    -->
