@@ -7,20 +7,20 @@
         <div class="px-8 md:px-8">
             <div class="px-8 py-8 rounded-2xl">
                 <h2 class="text-4xl pb-6 md:pb-0 text-white md:text-5xl md:text-left md:px-3 md:py-3 md:mb-8">Regístrate ahora para empezar a crear</h2>
-                <form action="">
+                <form #newAccount="ngForm" (submit)="createAccount(newAccount)">
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">                        
-                            <input name="nombre" class="block w-full bg-transparent text-white border-b focus:outline-none rounded py-3 px-4 mb-3" id="grid-nombre" type="text" placeholder="Nombre">
+                            <input name="name" class="block w-full bg-transparent text-white border-b focus:outline-none rounded py-3 px-4 mb-3" id="grid-nombre" type="text" placeholder="Nombre" ngModel>
                         </div>           
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">                        
-                            <input name="nombre" class="block w-full bg-transparent text-white border-b focus:outline-none rounded py-3 px-4 mb-3" id="grid-nombre" type="text" placeholder="example@email.com">
+                            <input name="email" class="block w-full bg-transparent text-white border-b focus:outline-none rounded py-3 px-4 mb-3" id="grid-nombre" type="text" placeholder="example@email.com" ngModel>
                         </div>           
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">                        
-                            <input name="nombre" class="block w-full bg-transparent text-white border-b focus:outline-none rounded py-3 px-4 mb-3" id="grid-nombre" type="text" placeholder="Password">
+                            <input name="password" class="block w-full bg-transparent text-white border-b focus:outline-none rounded py-3 px-4 mb-3" id="grid-nombre" type="text" placeholder="Password" ngModel>
                         </div>           
                     </div>
                     <!-- Boton de ingreso y registor de cuenta-->

@@ -6,6 +6,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AuthLoginService } from './_services/auth-login.service';
 import { JwtResponse } from './_models/jwt-response';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CatchTokenService } from './_services/catch-token.service';
+import { AuthRoutesService } from './_services/auth-routes.service';
 
 
 
@@ -47,10 +49,11 @@ import { CatchTokenService } from './_services/catch-token.service';
     MatDialogModule, 
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatSnackBarModule
   ],
   providers: [
-    AuthLoginService,
+    AuthLoginService, AuthRoutesService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: CatchTokenService,

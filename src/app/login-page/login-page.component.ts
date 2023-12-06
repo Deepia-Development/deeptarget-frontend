@@ -3,7 +3,8 @@ import { Router } from '@angular/router';
 import { AuthLoginService } from '../_services/auth-login.service';
 import { Users } from '../_models/user.model';
 import { NgForm } from '@angular/forms';
-
+import { MatSnackBar } from '@angular/material/snack-bar';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
@@ -15,17 +16,62 @@ export class LoginPageComponent {
 
     constructor(
       private authService: AuthLoginService,
-      private router: Router
+      private router: Router,
+      private snackBar: MatSnackBar
     ) { }
 
     signIn(loginForm: NgForm){
       this.authService.signInUser(loginForm.value).subscribe((res: any) =>{
         localStorage.setItem('token', res.token);
           if(!res.success == true){
-            console.log("No puedes estar aqui apa");            
+              Swal.fire({
+                toast: true,
+                icon: 'error',
+                title: res.message,
+                animation: true,
+                position: 'top',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })            
           } else{
-            console.log("Hola pa");            
+              Swal.fire({
+                toast: true,
+                icon: 'error',
+                title: res.message,
+                animation: true,
+                position: 'top',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })      
           }        
         })
-      }   
+      }
+          
+      successLogin(message: string, panelClass: string) {
+        this.snackBar.open(message, 'Success', {
+          duration: 3000, 
+          horizontalPosition: 'center',
+          verticalPosition: 'top',           
+          panelClass: [panelClass]
+        });
+      }     
+
+      errorLogin(message: string, panelClass: string){
+        this.snackBar.open(message, '', {
+          duration: 3000,
+          horizontalPosition: 'center',
+          verticalPosition: 'top',
+          panelClass: ['blue-snackbar', panelClass]
+        })
+      }
 }

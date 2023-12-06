@@ -34,7 +34,10 @@ export class AuthLoginService {
   }
 
   isLogged(){
-    return !!localStorage.getItem('token');
+    const token = localStorage.getItem('token');
+    console.log('Token: ', token);
+    return !!token;
+    
   }
 
   logout(){
