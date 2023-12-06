@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'upload-csv', component: UploadCsvComponent },
   { path: 'csv-content', component: FoundColumnsComponent },
   { path: 'timeline', component: TimelineBarComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' }
+  { path: '', redirectTo: 'login', pathMatch: 'full' }
 ];
 
 @NgModule({

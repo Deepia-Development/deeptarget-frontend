@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxVideoTimelineModule } from 'ngx-video-timeline';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { AuthLoginService } from './_services/auth-login.service';
+import { JwtResponse } from './_models/jwt-response';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +21,7 @@ import { TimelineBarComponent } from './timeline-bar/timeline-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 import { MatDialogModule } from '@angular/material/dialog';
+import { CatchTokenService } from './_services/catch-token.service';
 
 
 
@@ -38,10 +44,18 @@ import { MatDialogModule } from '@angular/material/dialog';
     AppRoutingModule,
     NgxVideoTimelineModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule, 
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
-    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}
+    AuthLoginService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: CatchTokenService,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })
