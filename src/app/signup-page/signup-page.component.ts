@@ -24,7 +24,7 @@ export class SignupPageComponent {
           animation: true,
           position: 'top',
           showConfirmButton: false,
-          timer: 3000,
+          timer: 1500,
           timerProgressBar: true,
           didOpen: (toast) => {
             toast.addEventListener('mouseenter', Swal.stopTimer)
@@ -39,7 +39,7 @@ export class SignupPageComponent {
           animation: true,
           position: 'top',
           showConfirmButton: false,
-          timer: 3000,
+          timer: 1500,
           timerProgressBar: true,
           didOpen: (toast) => {
             toast.addEventListener('mouseenter', Swal.stopTimer)

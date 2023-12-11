@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthLoginService } from '../_services/auth-login.service';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,9 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  constructor() { }
+  constructor(
+    private authService: AuthLoginService
+  ) { }
 
   isOpen = false;
 

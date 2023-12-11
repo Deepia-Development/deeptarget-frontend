@@ -41,7 +41,7 @@ export class LoginPageComponent {
           } else{
               Swal.fire({
                 toast: true,
-                icon: 'error',
+                icon: 'success',
                 title: res.message,
                 animation: true,
                 position: 'top',
@@ -52,7 +52,9 @@ export class LoginPageComponent {
               toast.addEventListener('mouseenter', Swal.stopTimer)
               toast.addEventListener('mouseleave', Swal.resumeTimer)
             }
-          })      
+          }).then((res) =>{
+              this.router.navigate(['/campaigns'])
+          })
           }        
         })
       }
