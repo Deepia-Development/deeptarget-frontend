@@ -17,7 +17,7 @@ import { AuthRoutesService } from './_services/auth-routes.service';
 const routes: Routes = [
   { path: 'login', component: LoginPageComponent },
   { path: 'signup', component: SignupPageComponent },
-  { path: 'home', component: HomeComponent, canActivate: [AuthRoutesService]},  
+  { path: 'home', component: HomeComponent},  
   { path: 'campaigns', component: CampaignsComponent, canActivate: [AuthRoutesService]},
   { path: 'no-campaigns', component: NoCampaignsComponent, canActivate: [AuthRoutesService]},
   { path: 'upload-csv', component: UploadCsvComponent, canActivate: [AuthRoutesService]},
