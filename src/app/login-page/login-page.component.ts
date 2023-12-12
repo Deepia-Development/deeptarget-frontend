@@ -76,4 +76,8 @@ export class LoginPageComponent {
           panelClass: ['blue-snackbar', panelClass]
         })
       }
+
+      logout(){
+        this.authService.logout()
+      }
 }

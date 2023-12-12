@@ -18,4 +18,8 @@ export class HeaderComponent {
     this.isOpen = !this.isOpen;
   }
 
+  logout(){
+    this.authService.logout();
+  }
+
 }
