@@ -53,7 +53,7 @@ export class LoginPageComponent {
               toast.addEventListener('mouseleave', Swal.resumeTimer)
             }
           }).then((res) =>{
-              this.router.navigate(['/campaigns'])
+              this.router.navigate(['/upload-csv'])
           })
           }        
         })

@@ -35,12 +35,10 @@
                 </h2>
             </div>
             <!-- Boton para editar proyecto -->
-            <div class=" p-8 md:p-0 md:p-8">
-                <a [routerLink]="['/csv-content']">
-                    <button class="p-4 md:p-0 bg-gradient-to-r from-purple-800 to-purple-950 hover:from-green-400 hover:to-gray-900 font-bold md:py-3 rounded-3xl text-white w-40">
-                        Elegir Archivo
-                    </button>
-                </a>
+            <div class=" p-8 md:p-0 md:p-8">                                
+                <span class="p-6 py-3 w-full md:w-80 bg-gradient-to-r from-purple-800 to-purple-950 hover:from-green-400 hover:to-gray-900 font-bold md:py-3 rounded-3xl text-white md:w-40 btn btn-primary btn-file">
+                    Subir archivo <input type="file">
+                </span>                                  
             </div>
         </div>
     </div>
@@ -55,14 +53,12 @@
         </div>
         <div class="backdrop-blur-sm bg-black/50 rounded-lg md:w-full md:mt-3">
             <div class="p-5 rounded-lg md:p-8 md:rounded-lg">
-                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" width="100%" height="200px"> </iframe>
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" width="100%" height="300px"> </iframe>
             </div>                      
-            <div class="p-3 md:p-0 md:pb-6">
-                <a [routerLink]="['/']">
-                    <button class="py-3 w-full md:w-80 bg-gradient-to-r from-purple-800 to-purple-950 hover:from-green-400 hover:to-gray-900 font-bold md:py-3 rounded-3xl text-white md:w-40">
-                        Base de datos de aprendizaje
-                    </button>
-                </a>
+            <div class="p-3 md:p-0 md:pb-6">                
+                <button class="py-3 w-full md:w-80 bg-gradient-to-r from-purple-800 to-purple-950 hover:from-green-400 hover:to-gray-900 font-bold md:py-3 rounded-3xl text-white md:w-40">
+                    Base de datos de aprendizaje
+                </button>             
             </div>            
         </div>
     </div>
