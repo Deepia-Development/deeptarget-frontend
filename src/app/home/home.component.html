@@ -52,13 +52,26 @@
       </div>
     <!-- Contenedor de la derecha -->
     <div class="order-first md:order-2 md:flex md:items-end md:px-8 md:py-8">
-        <img src="../../assets/images/video-exmaple.jpg" alt="" class="rounded-lg">
-    </div>        
+      <video id="video" [src]="videoSource"  (timeupdate)="onTimeUpdate($event)" class="rounded-lg" controls>
+      </video>
+    </div>      
   </div>
-  <div class="md:flex md:justify-center md:pb-16">
-    <img src="../../assets/images/timeline.png" alt="" class="rounded-lg">
+  <!-- Progress Bar -->
+  <div>
+  </div>
+  <div class="md:flex md:justify-center md:p-32">    
+    <div>
+      <button class="play-pause-button" (click)="playButton()" [class.playing]="isPlaying" [class.paused]="!isPlaying">
+        <i>P</i>
+        <i>l</i>
+        <i>a</i>
+        <i>y</i>
+        <i>use</i>
+    </button>    
+    <!-- dribbble - twitter -->    
+    </div>
+    <input type="range" [(ngModel)]="currentTime" [max]="videoDuration" class="md:w-full"/>
   </div>
 </div>
-
 
 
