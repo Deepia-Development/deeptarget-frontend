@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { AuthLoginService } from './_services/auth-login.service';
 import { JwtResponse } from './_models/jwt-response';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -50,7 +51,8 @@ import { AuthRoutesService } from './_services/auth-routes.service';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatIconModule
   ],
   providers: [
     AuthLoginService, AuthRoutesService,

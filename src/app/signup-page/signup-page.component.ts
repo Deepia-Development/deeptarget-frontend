@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthLoginService } from '../_services/auth-login.service';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup-page',
@@ -11,7 +12,8 @@ import Swal from 'sweetalert2';
 export class SignupPageComponent {
 
   constructor(
-    private authService: AuthLoginService
+    private authService: AuthLoginService,
+    private router: Router
   ){}
 
   createAccount(newAccount: NgForm){
@@ -30,7 +32,9 @@ export class SignupPageComponent {
             toast.addEventListener('mouseenter', Swal.stopTimer)
             toast.addEventListener('mouseleave', Swal.resumeTimer)
           }
-        })     
+        }).then((res) =>{
+          this.router.navigate(['/login'])
+      })     
       }else{
         Swal.fire({
           toast: true,
@@ -39,7 +43,7 @@ export class SignupPageComponent {
           animation: true,
           position: 'top',
           showConfirmButton: false,
-          timer: 1500,
+          timer: 900,
           timerProgressBar: true,
           didOpen: (toast) => {
             toast.addEventListener('mouseenter', Swal.stopTimer)

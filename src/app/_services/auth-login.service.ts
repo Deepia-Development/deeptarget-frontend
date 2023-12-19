@@ -34,8 +34,7 @@ export class AuthLoginService {
   }
 
   isLogged(){
-    const token = localStorage.getItem('token');
-    console.log('Token: ', token);
+    const token = localStorage.getItem('token');    
     return !!token;
     
   }

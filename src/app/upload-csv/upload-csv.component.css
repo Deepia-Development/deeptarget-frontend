@@ -13,3 +13,7 @@
     display: block;
     cursor: pointer;
   }
+
+  .file-input {
+    display: none;
+  }

@@ -15,12 +15,3 @@ body {
 }
 
 /* Estilos para el Snackbar de éxito */
-.mat-mdc-snack-bar-container {
-    &.blue-snackbar {
-      --mdc-snackbar-container-color:  rgba(231, 76, 60, 0.45);
-      --mat-mdc-snack-bar-button-color: #fff;
-      --mdc-snackbar-supporting-text-color: #fff;
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-  }

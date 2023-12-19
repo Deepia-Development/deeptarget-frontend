@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,13 +16,17 @@ export class CampaignsService {
     private router: Router
   ) { }
 
-    read_csv(csvFile: File): Observable<any>{
-        const formData = new FormData();
-        formData.append('csvFile', csvFile);
+  private columnsSubject = new BehaviorSubject<string[]>([]);
+  columns$: Observable<string[]> = this.columnsSubject.asObservable();
 
-        return this.http.post(this.apiUrl, formData);
+    updateColumns(columns: string[]) {
+      this.columnsSubject.next(columns);
     }
 
-    
+    uploadFile(file: File): Observable<any>{
+        const formData= new FormData();
+        formData.append('csvFile', file, file.name);
 
+        return this.http.post(this.apiUrl, formData);
+    }    
 }

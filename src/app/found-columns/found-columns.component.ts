@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-found-columns',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./found-columns.component.css']
 })
 export class FoundColumnsComponent {
+  
+  @Input() columns: string[] = [];
 
 }
