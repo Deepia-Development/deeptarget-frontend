@@ -16,8 +16,8 @@ export class CampaignsService {
     private router: Router
   ) { }
 
-  private columnsSubject = new BehaviorSubject<string[]>([]);
-  columns$: Observable<string[]> = this.columnsSubject.asObservable();
+    private columnsSubject = new BehaviorSubject<string[]>([]);
+    columns$ = this.columnsSubject.asObservable();
 
     updateColumns(columns: string[]) {
       this.columnsSubject.next(columns);
