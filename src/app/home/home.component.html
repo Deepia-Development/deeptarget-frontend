@@ -9,7 +9,7 @@
             <h3 class="text-3xl p-5 md:p-0 md:font-medium md:text-lg md:tracking-tight text-white md:leading-tight md:m-5">
               Columnas
             </h3>          
-            <div class="p-6 md:p-0 md:grid md:grid-rows-4 md:gap-8 md:items-center md:pt-4">
+            <div class="p-6 md:p-6 md:grid md:grid-rows-4 md:gap-8 md:items-center md:pt-4">
               <div>
                 <div class="md:grid md:justify-center">                  
                   <div class="px-5 md:p-0 md:px-0">
@@ -51,7 +51,7 @@
         </div>
       </div>
     <!-- Contenedor de la derecha -->
-    <div class="order-first md:order-2 md:flex md:items-end md:px-8 md:py-8">
+    <div class="order-first md:order-2 md:flex md:items-end md:px-8 md:py-8 md:w-[750px]">
       <video id="video" [src]="videoSource" (timeupdate)="onTimeUpdate($event)" class="rounded-lg" controls>
       </video>
     </div>      

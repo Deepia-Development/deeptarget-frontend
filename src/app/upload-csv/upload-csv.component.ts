@@ -3,6 +3,7 @@ import { CampaignsService } from '../_services/campaigns.service';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-upload-csv',
   templateUrl: './upload-csv.component.html',
@@ -12,7 +13,9 @@ export class UploadCsvComponent {
     
     file!: File; 
     content: any[] = [];
-
+    classAplied = false;
+    tailwindClasses = new Map<string, boolean>();
+    defaultClass = 'py-2 mb-5 mt-5 md:mb-0 md:mt-0 w-full bg-purple-900 to-gray-900 font-bold md:py-3 rounded-3xl text-white md:w-40';
     
   
   constructor(
@@ -40,8 +43,10 @@ export class UploadCsvComponent {
       }
     );
   }   
-}
-function then(arg0: (res: any) => void) {
-  throw new Error('Function not implemented.');
+
+  toggleClass(key: string){
+    this.tailwindClasses.set(key, !this.tailwindClasses.get(key));
+  }
+
 }
 
